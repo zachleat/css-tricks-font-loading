@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<link rel="stylesheet" href="/css/existing-theme-md.css">
+		<link rel="stylesheet" href="/css/demo.css">
+
+		<link rel="preload" href="/rubik/Rubik-Bold-kern-latin.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/rubik/Rubik-Regular-kern-latin.woff2" as="font" type="font/woff2" crossorigin>
+		<style>
+			@font-face {
+				font-family: Rubik;
+				src: url(/rubik/Rubik-Bold-kern-latin.woff2) format("woff2"), url(/rubik/Rubik-Bold-kern-latin.woff) format("woff");
+				font-weight: 700;
+				font-display: swap;
+			}
+			@font-face {
+				font-family: Rubik;
+				src: url(/rubik/Rubik-Regular-kern-latin.woff2) format("woff2"), url(/rubik/Rubik-Regular-kern-latin.woff) format("woff");
+				font-weight: 400;
+				font-display: swap;
+			}
+		</style>
+		<script>
+			if( "fonts" in document ) {
+				var rubikreg = new FontFace("Rubik", "url(/rubik/Rubik-Regular-hint-all.woff2) format('woff2'), url(/rubik/Rubik-Regular-hint-all.woff) format('woff')");
+				var rubikbold = new FontFace("Rubik", "url(/rubik/Rubik-Bold-hint-all.woff2) format('woff2'), url(/rubik/Rubik-Bold-hint-all.woff) format('woff')", { weight: "700" });
+
+				Promise.all([ rubikbold.load(), rubikreg.load() ]).then(function(loadedFonts) {
+					loadedFonts.forEach(function(font) {
+						document.fonts.add(font);
+					});
+				});
+			}
+		</script>
+		<script>
+			// Add support for Edge/IE to use hinting and opentype features
+			// Warning: the repaints don’t group here
+			if(!("fonts" in document) && "querySelector" in document) {
+				var style = document.createElement("style");
+				style.innerHTML = "@font-face { font-family: Rubik; src: url(/rubik/Rubik-Regular-hint-all.woff2) format('woff2'), url(/rubik/Rubik-Regular-hint-all.woff) format('woff'); } @font-face { font-family: Rubik; font-weight: 700; src: url(/rubik/Rubik-Bold-hint-all.woff2) format('woff2'), url(/rubik/Rubik-Bold-hint-all.woff) format('woff'); }"
+				document.querySelector("head").appendChild(style);
+			}
+		</script>
+	</head>
+	<body>
+		<p class="fresh">Fresh Article</p>
+		<h1 class="hed">Material <span class="frac">1/2</span> Design Animation Guides Жж</h1>
+		<p class="comments">Comments</p>
+		<p class="comments-cta">Start the Conversation</p>
+		<p class="bodytxt">I've seen two guides posted to Medium about animation in the last month that have seriously blown up!</p>
+		<ul class="bodytxt">
+			<li>Taras Skytskyi's <a href="#">The ultimate guide to proper use of animation in UX</a></li>
+			<li>Jonas Naimark's <a href="#">Motion design doesn't have to be hard</a></li>
+		</ul>
+		<p class="bodytxt">There is a lot to learn in each one! The demonstration animations they use are wonderfully well done and each guide demonstrates an interesting and effective animation technique, often paired next to a less successful technique to drive the point home. …</p>
+		<div class="tag">Animation<span></span>Material Design</div>
+	</body>
+</html>

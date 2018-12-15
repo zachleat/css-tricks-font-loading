@@ -1,0 +1,137 @@
+body {
+	background-color: #110e17;
+	color: #bdbdbd;
+	font-family: sans-serif;
+	min-height: 704px;
+}
+/*body:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 704px;
+	background-position: 0 0;
+	background-image: url(/sample.png);
+	background-repeat: no-repeat;
+	opacity: .15;
+	z-index: -1;
+}*/
+:link,
+:visited {
+	color: #fff;
+}
+.hed,
+.opentype,
+.fresh,
+.comments,
+.comments-cta,
+.tag {
+	font-family: Rubik, sans-serif;
+}
+.fresh {
+	/*font-weight: 500;*/
+	font-size: 17.5px;
+}
+.hed {
+	color: #fff;
+	font-size: 3.125rem; /* 50px /16 */
+	line-height: 1;
+}
+.comments {
+}
+.comments-cta {
+	color: #fff;
+	font-size: 17px;
+	letter-spacing: .1px;
+	/* Mislabeled */
+	/*font-weight: 500;*/
+}
+.tag {
+	/*font-weight: 500;*/
+	font-size: 11px;
+	letter-spacing: .5px;
+	text-transform: uppercase;
+	/*-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;*/
+}
+
+/* positioning */
+.fresh {
+	position: absolute;
+	left: 27px;
+	top: 136px;
+}
+.hed {
+	margin-top: 182px;
+	max-width: 800px;
+	padding-left: 21px;
+}
+.comments {
+	margin-top: 46px;
+	margin-bottom: 0;
+	padding-left: 262px;
+}
+.comments-cta {
+	margin-top: 6px;
+	margin-bottom: 0;
+	padding-left: 262px;
+}
+.tag {
+	position: absolute;
+	left: 56px;
+	top: 685px;
+}
+.tag span {
+	display: inline-block;
+	min-width: 10px;
+}
+
+/* Body text */
+.bodytxt {
+	font-family: system-ui, sans-serif;
+	max-width: 652px;
+	padding: 0 20px;
+	font-size: 16.66666px;
+	line-height: 1.4;
+}
+.bodytxt {
+	padding-top: 10px;
+}
+ul.bodytxt {
+	margin: 0;
+	margin-top: 38px;
+	padding: 0;
+}
+ul.bodytxt li {
+	padding-left: 70px;
+	line-height: 1.5;
+}
+
+/* Fractions */
+.frac {
+	font-feature-settings: "frac" on;
+}
+@supports (font-variant-numeric: diagonal-fractions) {
+	.frac {
+		font-variant-numeric: diagonal-fractions;
+	}
+}
+
+.ordn {
+	font-feature-settings: "ordn" on;
+}
+@supports (font-variant-numeric: ordinal) {
+	.ordn {
+		font-variant-numeric: ordinal;
+	}
+}
+.dlig {
+	font-feature-settings: "dlig" on;
+}
+
+@supports (font-variant-ligatures: discretionary-ligatures) {
+	.dlig {
+		font-variant-ligatures: discretionary-ligatures;
+	}
+}
