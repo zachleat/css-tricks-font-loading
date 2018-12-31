@@ -20,7 +20,7 @@ addEventListener("activate", event => {
 });
 
 addEventListener("fetch", event => {
-	console.log("The service worker is listening.", event.request);
+	// console.log("The service worker is listening.", event.request);
 
 	let request = event.request;
 	event.respondWith(
