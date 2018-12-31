@@ -36,6 +36,17 @@
 			}
 		</script>
 		<script>
+			// Service Worker for repeat views
+			if( navigator.serviceWorker ) {
+				navigator.serviceWorker.register("/serviceworker.js")
+					.then(function( registration ) {
+						console.log( "Service Worker success:", registration.scope );
+					}).catch(function( error ) {
+						console.log( "Service Worker error:", error );
+					});
+			}
+		</script>
+		<script>
 			// Add support for Edge/IE to use hinting and opentype features
 			// Warning: the repaints don’t group here
 			if(!("fonts" in document) && "querySelector" in document) {
